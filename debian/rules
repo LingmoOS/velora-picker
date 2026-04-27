@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+# ----------------- Qt 版本自动检测逻辑 -----------------
+QMAKE_EXECUTABLE := $(shell command -v qmake6 2>/dev/null)
+
+ifeq ($(QMAKE_EXECUTABLE),)
+	# 未找到 Qt6 qmake, 回退到 Qt5
+	QMAKE := qmake
+	export QT_SELECT=5
+else
+	# 找到 Qt6 qmake, 使用 Qt6
+	QMAKE := qmake6
+	export QT_SELECT=6
+endif
+# ---------------------------------------------------------
+
+export FLAGS = "-g -Wdate-time -ffile-prefix-map=$(CURDIR)=."
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	$(QMAKE) -makefile \
+		QMAKE_CFLAGS_RELEASE=$(FLAGS) \
+		QMAKE_CFLAGS_DEBUG=$(FLAGS) \
+		QMAKE_CXXFLAGS_RELEASE=$(FLAGS) \
+		QMAKE_CXXFLAGS_DEBUG=$(FLAGS) \
+		QMAKE_LFLAGS_RELEASE=\"-Wl,-z,relro\" \
+		QMAKE_LFLAGS_DEBUG=\"-Wl,-z,relro\" \
+		QMAKE_STRIP=: \
+		PREFIX=/usr
