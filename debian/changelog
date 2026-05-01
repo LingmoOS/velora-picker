@@ -1,3 +1,9 @@
+velora-picker (6.0.12.lingmo.1) unstable; urgency=medium
+
+  * new release for Lingmo OS.
+
+ -- Lingmo OS Team <team@lingmo.org>  Fri, 01 May 2026 21:14:00 +0800
+
 deepin-picker (6.0.11) unstable; urgency=medium
 
   * chore: Update version to 6.0.11
