@@ -6,7 +6,7 @@
 %define specrelease %{pkgrelease}%{?dist}
 %endif
 
-Name:           deepin-picker
+Name:           lingmo-picker
 Version:        3.9.8
 Release:        %{specrelease}
 Summary:        A color picker tool for deepin
@@ -28,7 +28,7 @@ BuildRequires: pkgconfig(xcb-util)
 
 %description
 %{summary}.
- 
+
 %prep
 %autosetup
 
@@ -36,13 +36,13 @@ BuildRequires: pkgconfig(xcb-util)
 # help find (and prefer) qt5 utilities, e.g. qmake, lrelease
 export PATH=%{_qt5_bindir}:$PATH
 mkdir build && pushd build
-%qmake_qt5 ../ 
+%qmake_qt5 ../
 %make_build
 popd
 
 %install
 %make_install -C build INSTALL_ROOT="%buildroot"
- 
+
 %files
 %doc README.md
 %license LICENSE
@@ -53,7 +53,7 @@ popd
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/%{name}/translations/*.qm
 
- 
+
 %changelog
 * Thu Aug 13 2020 guoqinglan <guoqinglan@uniontech.com> - 5.8.0.19-1
 - Update to 3.9.8

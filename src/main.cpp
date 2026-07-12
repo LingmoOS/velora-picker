@@ -92,11 +92,11 @@ int main(int argc, char *argv[])
     if (isLaunchByDBus) {
         qDebug() << "Registering DBus service";
         QDBusConnection dbus = QDBusConnection::sessionBus();
-        if (dbus.registerService("com.deepin.Picker")) {
-            qDebug() << "Successfully registered DBus service: com.deepin.Picker";
-            dbus.registerObject("/com/deepin/Picker", picker.data(), QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
+        if (dbus.registerService("com.lingmo.Picker")) {
+            qDebug() << "Successfully registered DBus service: com.lingmo.Picker";
+            dbus.registerObject("/com/lingmo/Picker", picker.data(), QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
         } else {
-            qWarning() << "Failed to register DBus service: com.deepin.Picker";
+            qWarning() << "Failed to register DBus service: com.lingmo.Picker";
         }
     }
     

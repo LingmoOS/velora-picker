@@ -1,4 +1,4 @@
-Source: velora-picker
+Source: lingmo-picker
 Section: utils
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -16,17 +16,17 @@ Build-Depends:
  qt6-svg-dev | libqt5svg5-dev,
  libxtst-dev
 Standards-Version: 4.5.0
-Homepage: https://github.com/LingmoOS/velora-picker
+Homepage: https://github.com/LingmoOS/lingmo-picker
 
-Package: deepin-picker
+Package: lingmo-picker
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, deepin-picker-cli( =${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, lingmo-picker-cli( =${binary:Version})
 Description: Color picker tool for deepin
  A color picker tool for deepin.
 
-Package: deepin-picker-cli
+Package: lingmo-picker-cli
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: deepin-picker(<<5.0.5)
+Conflicts: lingmo-picker(<<5.0.5)
 Description: Color picker tool for deepin
  A color picker tool for deepin.

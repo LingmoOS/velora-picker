@@ -52,7 +52,7 @@ class CPickerManager: public QObject
     /**
      * @brief 声明DBUS名称接口
      */
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.Picker")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.Picker")
 
 public:
     CPickerManager();

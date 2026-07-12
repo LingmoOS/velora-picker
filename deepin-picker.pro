@@ -79,7 +79,7 @@ icon.files = image/deepin-picker.svg
 desktop.files = deepin-picker.desktop
 manual.files = manual/*
 
-dbus_service.files = $$PWD/com.deepin.Picker.service
+dbus_service.files = $$PWD/com.lingmo.Picker.service
 dbus_service.path = $$PREFIX/share/dbus-1/services
 
 INSTALLS += target icon desktop manual dbus_service
