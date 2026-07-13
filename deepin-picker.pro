@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = deepin-picker
+TARGET = lingmo-picker
 
 # 合并 Qt 模块配置
 versionAtLeast(QT_VERSION, 6.0.0) {
@@ -66,8 +66,8 @@ isEmpty(PREFIX){
 isEmpty(BINDIR):BINDIR=/usr/bin
 isEmpty(ICONDIR):ICONDIR=/usr/share/icons/hicolor/scalable/apps
 isEmpty(APPDIR):APPDIR=/usr/share/applications
-isEmpty(DSRDIR):DSRDIR=/usr/share/deepin-picker
-isEmpty(DOCDIR):DOCDIR=/usr/share/dman/deepin-picker
+isEmpty(DSRDIR):DSRDIR=/usr/share/lingmo-picker
+isEmpty(DOCDIR):DOCDIR=/usr/share/dman/lingmo-picker
 
 target.path = $$INSTROOT$$BINDIR
 icon.path = $$INSTROOT$$ICONDIR

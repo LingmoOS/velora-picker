@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     qDebug() << "Loaded application translations";
 
     app.setOrganizationName("deepin");
-    app.setApplicationName("deepin-picker");
+    app.setApplicationName("lingmo-picker");
     app.setApplicationVersion("1.2");
     qDebug() << "Set application info - name: deepin-picker, version: 1.2";
 

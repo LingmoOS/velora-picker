@@ -1,3 +1,3 @@
 [D-BUS Service]
 Name=com.lingmo.Picker
-Exec=/usr/bin/deepin-picker -i
+Exec=/usr/bin/lingmo-picker -i

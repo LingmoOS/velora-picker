@@ -1,12 +1,12 @@
 [Desktop Entry]
 Categories=Graphics;Picker;
 Comment=Color picker
-Exec=deepin-picker
+Exec=lingmo-picker
 GenericName=Picker
 Icon=deepin-picker
 Name=Deepin Picker
 StartupNotify=true
-TryExec=deepin-picker
+TryExec=lingmo-picker
 Type=Application
 X-Deepin-Vendor=deepin
 NoDisplay=true
